@@ -1,0 +1,193 @@
+doctype html
+html
+
+    
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css' integrity='sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==' crossorigin='anonymous' referrerpolicy='no-referrer')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel="stylesheet", href="./css/style.css")
+
+  
+    title Mi plantilla Pug
+body
+  section#inicio.inicio
+   .contenido-seccion
+    header
+      div#nav-bar(onclick='mostrarOcultarMenu()')
+        i.fa-solid.fa-bars
+      nav#nav.nav
+        a(href='#inicio') Inicio
+        a(href='#sobremi') Sobre m&iacute;
+        a(href='#habilidades') Habilidades
+        a(href='#resumen') Resumen
+        a(href='#contacto') Contacto
+      .logo
+        | Almi
+        span.color Ron
+    .info
+      h1 #{mensaje.ape}
+      h2 PROGRAMADOR, DISE&Ntilde;ADOR, PROFESIONAL
+      .redes
+        a(href='#')
+          i.fa-brands.fa-twitter
+        a(href='#')
+          i.fa-brands.fa-facebook-f
+        a(href='#')
+          i.fa-brands.fa-square-instagram
+        a(href='#')
+          i.fa-brands.fa-youtube
+        a(href='#')
+          i.fa-brands.fa-linkedin-in
+        a(href='#')
+          i.fa-brands.fa-pinterest-p
+    .foto
+      img(src='./images/logo.png' alt='' )
+
+section#sobremi.sobremi
+  .contenido-seccion
+    h2.titulo-seccion Sobre Mi
+    h3 Detalles personales
+    p.especial Me dedico a producir apps y sitios web muy originales para mis clientes
+    p
+      | Soy un diseñador web apasionado y con experiencia en la creación de sitios web atractivos y funcionales para empresas y organizaciones. Me especializo en la creación de sitios web responsivos y accesibles para garantizar una experiencia de usuario óptima.
+    .fila
+      .col
+        i.fa-solid.fa-user
+        span.titulo-detalle Perfil
+        p
+          | Soy una persona altamente capacitada en diversas áreas, con habilidades y capacidades en una amplia experiencia en HTML , CSS  , PYTHON , JAVASCRIPT, lo que me ha permitido desarrollar un conjunto de competencias únicas y muy valiosas para cualquier organización.
+      .col
+        i.fa-solid.fa-location-pin
+        span.titulo-detalle Ubicaci&oacute;n
+        p
+          | Estoy buscando trabajo en arequipa-peru o en una ubicación cercana. También estoy dispuesto/a a mudarme si se requiere para el trabajo
+      .col
+        i.fa-solid.fa-flag
+        span.titulo-detalle Intereses
+        p
+          | Soy una persoan autodidacta , disfruto de aprender nuevas tecnologias y implemtentarlas a mi proyectos personales donde he encontrado formas de aplicar mis habilidades y competencias en mi carrera profesional.
+section#habilidades.habilidades
+  .contenido-seccion
+    h2.titulo-seccion Mis habilidades
+    h3 Me especializo en
+    .fila
+      .col
+        span #{mensaje.esp1}
+        .cont-barra
+          #html.barra
+            // mediante javascript luego genereremos 17 barritas con clase e
+          span 98%
+      .col
+        span #{mensaje.esp2}
+        .cont-barra
+          #javascript.barra
+            // mediante javascript luego genereremos 17 barritas con clase e
+          span 70%
+    .fila
+      .col
+        span #{mensaje.esp3}
+        .cont-barra
+          #wordpress.barra
+            // mediante javascript luego genereremos 17 barritas con clase e
+          span 90%
+      .col
+        span #{mensaje.esp4}
+        .cont-barra
+          #photoshop.barra
+            // mediante javascript luego genereremos 17 barritas con clase e
+          span 85%
+    .fila
+      .col
+        span #{mensaje.esp5}
+        .cont-barra
+          #php.barra
+            // mediante javascript luego genereremos 17 barritas con clase e
+          span 95%
+      .col
+        span #{mensaje.esp6}
+        .cont-barra
+          #ilustrator.barra
+            // mediante javascript luego genereremos 17 barritas con clase e
+          span 75%
+// SECCION RESUMEN
+section#resumen.resumen
+  .contenido-seccion
+    h2.titulo-seccion Resumen
+    h3 Mi preparaci&oacute;n y experiencia
+    .info
+      .col
+        span.titulo Educaci&oacute;n
+        table
+          tr
+            td.datos
+              h3 2007 - 2014
+            td.descripcion(rowspan='2')
+              | Mis estudios fueron una gran apoyo asia mi persona por que me ayudaron a formarme.
+          tr
+            td
+              h4 Lic. en computaci&oacute;n
+              p Colegio Gran Unidad Escolar Mariano Melgar
+              span.promedio 15.9 PG
+        table
+          tr
+            td.datos
+              h3 2020 - 2023
+            td.descripcion(rowspan='2')
+              | Con tecsup aprendi muchas de mis capacidades para poder implementarlas en la vida cotidiana.
+          tr
+            td
+              h4 Programador 
+              p Tecsup
+              span.promedio 17.5 PG
+      .col
+        span.titulo Experiencia Laboral
+        table
+          tr
+            td.datos
+              h3 1 A&ntilde;os
+            td.descripcion(rowspan='2')
+              | Una empresa con el cual hize mis primeras practicas y me ayudaron mucho como debia trabajar en un trabajo real y aprendi diferentes cosas utiles.
+          tr
+            td
+              h4 Drogueria Mariana 
+              p Programador Junior
+        table
+          tr
+            td.datos
+              h3 1 A&ntilde;os
+            td.descripcion(rowspan='2')
+              | Es una empresa propia donde , la seguridad informatica es muy util para cualquier pagina web.
+          tr
+            td
+              h4 Kerack Seguriti.
+              p Dise&ntilde;ador web
+// SECCION CONTACTO
+section#contacto.contacto
+  .contenido-seccion
+    h2.titulo-seccion Contacto
+    h3 Ponte en contacto ahora mismo!
+    .fila
+      .col
+        h2
+          i.fa-solid.fa-phone
+          |  Tel&eacute;fono
+        span.info-contacto #{mensaje.cont1}
+      .col
+        h2
+          i.fa-solid.fa-envelope
+          |  Correo
+        span.info-contacto #{mensaje.cont2}
+      .col
+        h2
+          i.fa-solid.fa-globe
+          |  P&aacute;gina Web
+        span.info-contacto #{mensaje.cont3}
+
+
+
+
+
+
+    script(src="./js/main.js") 
